@@ -36,3 +36,46 @@
     transform: rotate(360deg);
   }
 }
+
+.bg {
+  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
+  height: 110vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+#wrapper {
+  width: 93%;
+  height: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background:rgba(0, 0, 0, 0.9); 
+}
+#bordering{
+  border-style: solid;
+}
+h1{
+  color:rgb(0, 247, 0);
+}
+#control-size{
+  font-size:20px;
+  color: lightcoral;
+}
+
+#paging{
+  border: medium none;
+  color: #FFFFFF;
+  height: 50px;
+  position: fixed;
+
+}
+
