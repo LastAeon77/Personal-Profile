@@ -2,8 +2,8 @@ import LoRlogo from "../images/LibraryofRuinaLogo.png"
 import kamPic from "../images/Kam.png"
 
 export const PersonalInfo = {
-    Name: "Kamontat Swasdikulavath",
-    Email: "siris.mark@gmail.com",
+    Name: "Insert Name Here",
+    Email: "email@gmail.com",
     Github: "https://github.com/LastAeon77",
     Major: "Computer Science and Bioinformatics",
     School: "Whitworth University",
