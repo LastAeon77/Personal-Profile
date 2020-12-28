@@ -2,7 +2,7 @@ import LoRlogo from "../images/LibraryofRuinaLogo.png"
 import kamPic from "../images/Kam.png"
 
 export const PersonalInfo = {
-    Name: "Insert Name Here",
+    Name: "Insert Name",
     Email: "email@gmail.com",
     Github: "https://github.com/LastAeon77",
     Major: "Computer Science and Bioinformatics",
