@@ -16,10 +16,8 @@ import { Resume } from './components/resume'
 function App() {
   const [projects] = useCollectionData(db.collection('Projects'));
   const projectinf = projects ?? projects
-  console.log(projectinf)
   const [PersonInfo] = useCollectionData(db.collection('PersonInfo'));
   const k = PersonInfo ?? PersonInfo
-  console.log(k)
   return (
     <div className="App">
       <Router>
