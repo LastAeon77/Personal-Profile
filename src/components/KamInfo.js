@@ -1,11 +1,21 @@
 import { Component } from 'react'
 import { Figure, Container, Row, Col, ListGroup } from 'react-bootstrap'
 import { SocialIcon } from 'react-social-icons';
+import { db } from './firebase'
 
 export default class Person extends Component {
     constructor(props) {
         super(props);
-        this.state = { show_info: false };
+        this.state = {
+            data: ''
+        }
+    }
+    componentDidMount() {
+        var promise = db.collection('PersonInfo').doc('RyljxNQDDTgtKkcFkUe3').get().then(doc => doc.data())
+
+        promise.then(result => {
+            this.setState({ data: result });
+        })
     }
     render() {
         return (
@@ -20,7 +30,7 @@ export default class Person extends Component {
                                 width={171}
                                 height={180}
                                 alt="171x180"
-                                src={this.props.data.Images}
+                                src=""
                             />
                             <Figure.Caption>
                                 A picture of me winning a bronze IYPT medal, 2019
@@ -29,8 +39,8 @@ export default class Person extends Component {
                     </Col>
                     <Col>
                         <ul>
-                            <li>Name: {this.props.data.Name}</li>
-                            <li>Email: {this.props.data.Email}</li>
+                            <li>Name: {this.state.data.Name}</li>
+                            <li>Email: {this.state.data.Email}</li>
                         </ul>
                     </Col>
                 </Row>
