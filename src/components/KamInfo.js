@@ -4,10 +4,6 @@ import { Component } from 'react'
 import kamPic from "../images/Kam.png"
 
 export default class Person extends Component {
-    constructor(props){
-        super(props)
-    }
-
     render() {
         const data = this.props.data
         return (

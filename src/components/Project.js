@@ -1,7 +1,6 @@
 import React from 'react'
 import { Component } from 'react'
 import { Container, Pagination, Media } from 'react-bootstrap'
-import { Projects } from "./Informs"
 
 class Project extends Component {
     constructor(props) {
@@ -46,7 +45,6 @@ export default class ProjectDisplay extends Component {
     constructor() {
         super();
         this.state = {
-            projs: Object.entries(Projects).map((things) => things[1]),
             currentPage: 1,
             todosPerPage: 2,
         };
@@ -59,7 +57,7 @@ export default class ProjectDisplay extends Component {
     }
 
     render() {
-        const { projs, currentPage, todosPerPage } = this.state;
+        const { currentPage, todosPerPage } = this.state;
         const projx = this.props.data
         // Logic for displaying todos
         const indexOfLastTodo = currentPage * todosPerPage;

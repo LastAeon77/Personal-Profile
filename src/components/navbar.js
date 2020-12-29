@@ -1,4 +1,4 @@
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import { Component } from "react"
 import { LinkContainer } from 'react-router-bootstrap';
 
@@ -6,7 +6,9 @@ class Bar extends Component {
     render() {
         return (
             <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="/home">Kamontat Swasdikulavath</Navbar.Brand>
+                <LinkContainer to="/home">
+                    <Navbar.Brand>Kamontat Swasdikulavath</Navbar.Brand>
+                </LinkContainer>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
@@ -19,10 +21,6 @@ class Bar extends Component {
                         <LinkContainer to="/resume">
                             <Nav.Link>Resume</Nav.Link>
                         </LinkContainer>
-                        <NavDropdown title="Other" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="/Test">Test</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Resume</NavDropdown.Item>
-                        </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
