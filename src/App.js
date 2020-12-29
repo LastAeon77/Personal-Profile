@@ -2,16 +2,24 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Bar from "./components/navbar"
 import Person from "./components/KamInfo"
-import { PersonalInfo, Projects } from "./components/Informs"
-import ProjectDisplay from "./components/Project"
-import FakePerson from "./components/KamInfoFire"
+// import ProjectDisplay from "./components/Project"
+import { db } from './components/firebase'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
+import ProjectDisplay from './components/Project'
+import { useCollectionData } from 'react-firebase-hooks/firestore';
+import { Resume } from './components/resume'
 
 function App() {
+  const [projects] = useCollectionData(db.collection('Projects'));
+  const projectinf = projects ?? projects
+  console.log(projectinf)
+  const [PersonInfo] = useCollectionData(db.collection('PersonInfo'));
+  const k = PersonInfo ?? PersonInfo
+  console.log(k)
   return (
     <div className="App">
       <Router>
@@ -22,12 +30,14 @@ function App() {
           <header className="bg">
             <div id="wrapper">
               <Switch>
+                <Route path="/resume">
+                  <Resume />
+                </Route>
                 <Route path="/projects">
-                  <ProjectDisplay />
+                  <ProjectDisplay data={projectinf} />
                 </Route>
                 <Route path="/">
-                  <Person />
-                  {/* <FakePerson /> */}
+                  <Person data={k} />
                 </Route>
               </Switch>
             </div>

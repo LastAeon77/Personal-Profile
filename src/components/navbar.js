@@ -16,6 +16,9 @@ class Bar extends Component {
                         <LinkContainer to="/projects">
                             <Nav.Link>Project</Nav.Link>
                         </LinkContainer>
+                        <LinkContainer to="/resume">
+                            <Nav.Link>Resume</Nav.Link>
+                        </LinkContainer>
                         <NavDropdown title="Other" id="basic-nav-dropdown">
                             <NavDropdown.Item href="/Test">Test</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Resume</NavDropdown.Item>

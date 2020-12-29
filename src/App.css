@@ -38,7 +38,7 @@
 }
 
 .bg {
-  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
+  background-image: url("https://image.freepik.com/free-vector/background-with-night-city-neon-lights_1441-2822.jpg");
   height: 110vh;
   background-position: center;
   background-size: cover;
@@ -58,7 +58,7 @@
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  background:rgba(0, 0, 0, 0.9); 
+  background:rgba(0, 0, 0, 0.7); 
 }
 #bordering{
   border-style: solid;
