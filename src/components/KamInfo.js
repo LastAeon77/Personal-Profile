@@ -2,6 +2,7 @@ import { Figure, Container, Row, Col, ListGroup } from 'react-bootstrap'
 import { SocialIcon } from 'react-social-icons';
 import { Component } from 'react'
 import kamPic from "../images/Kam.png"
+import { LinkContainer } from 'react-router-bootstrap';
 
 export default class Person extends Component {
     render() {
@@ -33,6 +34,19 @@ export default class Person extends Component {
                             <li>School: {data?.[0].School}</li>
                             <li>Major: {data?.[0].Major}</li>
                         </ListGroup>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <LinkContainer to="/projects">
+                            <p id="hover">Click here to check out my Projects!</p>
+                        </LinkContainer>
+                        <LinkContainer to="/resume">
+                            <p id="hover">Take a peak at my resume</p>
+                        </LinkContainer>
+                        <LinkContainer to="/transcript">
+                            <p id="hover">You can check out my unofficial transcript here!</p>
+                        </LinkContainer>
                     </Col>
                 </Row>
                 <br></br>

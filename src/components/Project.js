@@ -15,7 +15,7 @@ class Project extends Component {
             <Container>
                 <Media>
                     <Media.Body>
-                        <h2>{this.props.data.Name}</h2>
+                        <h2 id="hover"><a href={this.props.data.Link}>{this.props.data.Name}</a></h2>
                         <p>
                             {this.props.data.Description}
                         </p>
@@ -32,6 +32,7 @@ class Project extends Component {
                             className="ml-3"
                             src={this.props.data.ImgLink}
                             alt="-"
+                            id="hover"
                         />
                     </a>
                 </Media>

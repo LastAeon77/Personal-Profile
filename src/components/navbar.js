@@ -21,6 +21,9 @@ class Bar extends Component {
                         <LinkContainer to="/resume">
                             <Nav.Link>Resume</Nav.Link>
                         </LinkContainer>
+                        <LinkContainer to="/transcript">
+                            <Nav.Link>Transcript</Nav.Link>
+                        </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

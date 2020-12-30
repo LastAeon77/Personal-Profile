@@ -12,6 +12,7 @@ import {
 import ProjectDisplay from './components/Project'
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 import { Resume } from './components/resume'
+import {Transcript} from './components/transcript'
 
 function App() {
   const [projects] = useCollectionData(db.collection('Projects'));
@@ -28,6 +29,9 @@ function App() {
           <header className="bg">
             <div id="wrapper">
               <Switch>
+              <Route path="/transcript">
+                  <Transcript />
+                </Route>
                 <Route path="/resume">
                   <Resume />
                 </Route>
