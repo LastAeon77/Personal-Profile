@@ -82,3 +82,11 @@ h1{
 #hover{
   cursor: pointer;
 }
+
+#centerize{
+  align-items: center;
+}
+
+.pagination {
+  justify-content: center;
+}

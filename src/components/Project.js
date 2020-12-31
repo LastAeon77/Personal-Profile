@@ -1,6 +1,6 @@
 import React from 'react'
 import { Component } from 'react'
-import { Container, Pagination, Media } from 'react-bootstrap'
+import { Container, Pagination, Media, Col, Row } from 'react-bootstrap'
 
 class Project extends Component {
     constructor(props) {
@@ -52,9 +52,11 @@ export default class ProjectDisplay extends Component {
         this.handleClick = this.handleClick.bind(this)
     }
     handleClick(event) {
-        this.setState({
-            currentPage: Number(event.target.id)
-        });
+        if (event.target.id > 0 && event.target.id <= Math.ceil(this.props.data?.length / this.state.todosPerPage)) {
+            this.setState({
+                currentPage: Number(event.target.id)
+            });
+        }
     }
 
     render() {
@@ -90,10 +92,33 @@ export default class ProjectDisplay extends Component {
 
         return (
             <div>
-                <Container>
-                    <h1><b>Projects</b></h1>
-                    <Pagination size="sm"> {renderPageNumbers}</Pagination>
-                    <div id="bordering">{renderprojs}</div>
+                <Container fluid>
+                    <Row>
+                        <Col>
+                            <h1><b>Projects</b></h1>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col sm={1}>
+                            <button onClick={this.handleClick} id={this.state.currentPage - 1} key={this.state.currentPage - 1}>
+                                Prev
+                            </button>
+                        </Col>
+                        <Col sm={10}>
+                            <div id="bordering">{renderprojs}</div>
+                        </Col>
+                        <Col sm={1}>
+                            <button onClick={this.handleClick} id={this.state.currentPage + 1} key={this.state.currentPage + 1}>
+                                NEXT
+                            </button>
+                        </Col>
+                    </Row>
+                    <br></br>
+                    <Row>
+                        <Col>
+                            <Pagination size="sm"> {renderPageNumbers}</Pagination>
+                        </Col>
+                    </Row>
                 </Container>
             </div>
         )
