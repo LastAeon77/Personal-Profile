@@ -1,4 +1,4 @@
-import resume from '../images/resume.pdf'
+import resume from '../images/Kamontat_Resume.pdf'
 export function Resume() {
     return (
         <div>
