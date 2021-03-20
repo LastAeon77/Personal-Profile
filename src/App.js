@@ -1,6 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Bar from "./components/navbar"
+import Bar from './components/navbar'
 import Person from "./components/KamInfo"
 // import ProjectDisplay from "./components/Project"
 import { db } from './components/firebase'
